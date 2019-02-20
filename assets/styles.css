@@ -1,0 +1,52 @@
+:root {
+  --primary-color: #EE8434;
+  --secondary-color: #3C91E6;
+  --background-color: #FAFFFD;
+}
+/*  Comentario  */
+* {
+  padding: 0;
+  margin: 0;
+  border: 1px solid blue;
+  white-space: nowrap;
+}
+
+header {
+  background-color: var(--primary-color);
+  height: 100px;
+  width: 100%;
+}
+
+header h1 {
+  text-align: center;
+  margin-top: 31.5px;
+  font-family: Righteous;
+}
+
+.pedidos {
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  display: inline-block;
+  height: 70vh;
+  width: 70%;
+  vertical-align: top;
+}
+
+.pizzas {
+  box-sizing: border-box;
+  background-color: pink;
+  display: inline-block;
+  height: 70vh;
+  width: 30%;
+  vertical-align: top;
+}
+
+.ordenes {
+  height: 30vh;
+  background-color: white;
+}
+
+footer {
+  height: 30vh;
+  background-color: black;
+}
