@@ -1,0 +1,16 @@
+{
+  "name": "pizza-orders",
+  "version": "1.0.0",
+  "description": "creando eventos js en formularios",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "js",
+    "eventos",
+    "formulario"
+  ],
+  "author": "sandra",
+  "license": "ISC"
+}
