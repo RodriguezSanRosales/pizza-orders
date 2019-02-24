@@ -3,34 +3,122 @@
   <head>
     <title>Formularios</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="pizza.png">
     <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/styles.css">
   </head>
   <body>
-    <header>
-      <h1>Pizzas El tio Edgar</h1>
+    <header id="header">
+      <div class="container">
+          <div class="flxh">
+              <i class="fas fa-pizza-slice"></i>
+              <h1>Deli</h1>
+          </div>
+      </div>
     </header>
-
-    <main>
-      <section class="pedidos">
-
-        <form id="pizza-form">
-          <label for="pizza">Elige tu pizza</label>
-          <input id="pizza" type="text" name="pizza" placeholder="peperoni" value="hawainan">
-          <input type="submit" value="pide tu pizza ;D">
-        </form>
-
-      </section>
-      <section class="pizzas"></section>
-    </main>
-
-    <section class="ordenes">
-      <ul id="lista"></ul>
+    <section id="bgSecTop">
+      <div class="bgImg"></div>
+      <div class="container">
+        <div id="contForm">
+            <h2 class="titleForm">Arma tu pizza</h2>
+            <form id="pizza-form">
+              <div class="cont-pizzaForm">
+                <div>
+                  <label for="pizza">Elige la masa</label>
+                  <select name="opcionMasa" id="opcionMasa">
+                    <option value="original">Original</option>
+                      <option value="delgada">Delgada</option>
+                      <option value="crunch">Crunch</option>
+                  </select>
+                </div>
+                <div class="cnt-size">
+                    <p>Tamaño de la pizza</p>
+                    <div>
+                        <label for="chico">Chica</label>
+                        <input id="chico" name="size" type="radio" value="chica"/>
+                    </div>
+                    <div>
+                        <label for="mediana">Mediana</label>
+                        <input id="mediana" name="size" type="radio" value="mediana"/>
+                    </div>
+                    <div>
+                        <label for="grande">Grande</label>
+                        <input id="grande" name="size" type="radio" value="grande"/>
+                    </div>
+                </div>
+                <div>
+                    <label for="cantidad">¿Cuántas pizza vas a querer?</label>
+                    <input type="number" id="cantidad" value="1">
+                </div>
+              </div>
+              <div class="cntIngredients">
+                <h2>Escoge tus ingredientes</h2>
+                <div>
+                    <input  id="jamon" type="checkbox" name="ingredients" value="jamon">
+                    <label for="jamon">
+                      <img src="assets/images/jamon.jpg" alt="">
+                      <h3>Jamón</h3>
+                    </label>
+                </div>
+                <div class="ingCheck">
+                  <input  id="pepperoni" type="checkbox" name="ingredients" value="pepperoni">
+                  <label for="pepperoni">
+                    <img src="assets/images/peperoni.jpg" alt="">
+                    <h3>Pepperoni</h3>
+                  </label>
+                </div>
+                <div>
+                  <input  id="champ" type="checkbox" name="ingredients" value="champiñones">
+                  <label for="champ">
+                    <img src="assets/images/champ.jpg" alt="">
+                    <h3>Champiñones</h3>
+                  </label>
+                </div>
+                <div>
+                  <input  id="chile" type="checkbox" name="ingredients" value="jalapeños">
+                  <label for="chile">
+                    <img src="assets/images/jalapeno.jpg" alt="">
+                    <h3>Jalapeños</h3>
+                  </label>
+                </div>
+                <div>
+                  <input  id="tocino" type="checkbox" name="ingredients" value="tocino">
+                  <label for="tocino">
+                    <img src="assets/images/tocino.jpg" alt="">
+                    <h3>Tocino</h3>
+                  </label>
+                </div>
+                <div>
+                  <input  id="aceitunas" type="checkbox" name="ingredients" value="aceitunas">
+                  <label for="aceitunas">
+                    <img src="assets/images/aceitunas.jpg" alt="">
+                    <h3>Aceitunas</h3>
+                  </label>
+                </div>
+                <div>
+                  <input  id="cheddar" type="checkbox" name="ingredients" value="queso cheddar">
+                  <label for="cheddar">
+                    <img src="assets/images/cheddar.jpg" alt="">
+                    <h3>Queso Cheddar</h3>
+                  </label>
+                </div>
+              </div>
+              <input class="submit" type="submit" value="Agregar">
+            </form>
+        </div>
+      </div>
     </section>
-
-    <footer></footer>
-
+    <section>
+      <div class="container">
+        <div class="list-order">
+        </div>
+      </div>
+    </section>
+    
     <script src="assets/scripts.js"></script>
   </body>
 </html>
