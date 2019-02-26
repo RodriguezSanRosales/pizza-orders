@@ -23,6 +23,9 @@ header h1 {
   margin-left: 100px;
   transition: .5s;
 }
+h2{
+  font-size: 22px;
+}
 .flxh{
   position: relative;
 }
@@ -70,7 +73,7 @@ form p{
 }
 .bgImg:after{
   content: "";
-  background-color: #00000061;
+  background-color: #00000096;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -138,12 +141,7 @@ form .cont-pizzaForm div > label{
   padding: 20px 0;
   color: white;
 }
-.cntIngredients div{
-  padding: 0 30px 20px 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 .cntIngredients div label{
   width: 100%;
   width: 230px;
@@ -168,6 +166,14 @@ form .cont-pizzaForm div > label{
   transition: .5s;
 }
 @media(min-width:580px){
+  .cntIngredients div{
+    padding: 0 30px 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 260px;
+  }
   .cntIngredients div label:hover img{
     height: 150px;
     transition: .5s;
@@ -233,10 +239,11 @@ form select option{
 .cont-infoPizza:nth-child(3n+1){
   margin-right: 0;
 }
-.cont-infoPizza ul{
+
+.cont-infoPizza ul, .cntPedidoFinal ul{
   padding-left: 20px;
 }
-.cont-infoPizza ul li{
+.cont-infoPizza ul li, .cntPedidoFinal ul li{
   padding: 2px 0;
 }
 .titleOrder{
@@ -258,6 +265,61 @@ form select option{
   font-size: 12px;
   cursor: pointer;
 }
+#btn-more{
+  color: #000000;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  font-family: 'Lobster', cursive;
+  text-decoration: underline;
+  margin: 10px 0;
+}
+#order-button{
+  background-color: white;
+  color: black;
+  font-family: 'Lobster', cursive;
+  border-radius: 50px;
+  height: auto;
+  font-size: 18px;
+  max-width: 150px;
+  margin: auto;
+  width: 100%;
+  padding: 5px;
+  cursor: pointer;
+  text-align: center;
+  margin-right: 25px;
+}
+#order-button, #btn-more{
+  display: none;
+}
+.active{
+  display: inline-block !important;
+}
+.pizza-orden{
+  display: flex;
+  flex-wrap: wrap;
+}
+.pizza-orden h2{
+  width: 100%;
+  display: block;
+  padding: 20px 0;
+  font-size: 28px;
+}
+.cntPedidoFinal{
+  width: 20%;
+  padding: 10px;
+}
+.closeAll{
+  display: none;
+}
+.activeColor{
+  background-color: #ffffff;
+  padding: 50px 0;
+}
+#sectionOrders{
+  margin-bottom: 50px;
+}
+
 @media(max-width:1200px){
   .container{
     padding: 0 15px;
@@ -265,8 +327,12 @@ form select option{
   .cntIngredients div{
     padding: 0 10px 20px 10px;
   }
+  
 }
 @media(max-width:760px){
+  .cntPedidoFinal{
+    width: 33%;
+  }
   .cont-infoPizza{
     max-width: 49%;
     margin-right: 2%;
@@ -297,6 +363,9 @@ form select option{
   }
   .titleForm {
     font-size: 50px;
+  }
+  .cntPedidoFinal{
+    width: 100%;
   }
 }
 @media(max-width:580px){
