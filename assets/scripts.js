@@ -62,7 +62,7 @@ function updateList(){
     listOrder.innerHTML += contInfo;
   }
 
-
+  //sandra del futuro tienes que revizar esto para que se borre no solo del DOM sino también de array --> activeOrder
   var btn = document.getElementsByClassName('btn-delete');
   for (var i = 0; i < btn.length; i++) {
     btn[i].addEventListener('click', function(e) {
